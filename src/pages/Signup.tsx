@@ -33,7 +33,7 @@ export const Signup: React.FC = () => {
 
     try {
       await signUp(email, password, username);
-      navigate('/profile-setup');
+      navigate('/');
     } catch (err) {
       if (err instanceof Error) {
         if (err.message.includes('already registered')) {

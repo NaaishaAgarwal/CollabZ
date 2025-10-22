@@ -17,11 +17,7 @@ export const Layout: React.FC = () => {
       navigate('/login');
       return;
     }
-
-    if (!profile?.full_name && location.pathname !== '/profile-setup') {
-      navigate('/profile-setup');
-    }
-  }, [user, profile, navigate, location]);
+  }, [user, navigate]);
 
   useEffect(() => {
     if (!user) return;
